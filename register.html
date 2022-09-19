@@ -1,0 +1,102 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="static/simple.min.css">
+    <script src="static/sha256.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>body {background-color: #f5f7ff;}</style>
+    <script>
+        var language = (navigator.language || navigator.browserLanguage).toLowerCase();
+        if (language.indexOf('zh') != -1) {
+            document.title = '注册 | 引擎部落';
+        }
+        else if (language.indexOf('en') != -1) {
+            document.title = 'Register | Engine Tribe';
+        }
+        else {
+            document.title = 'Registro | Engine Tribe';
+        }
+    </script>
+</head>
+
+<body>
+    <h3 id="title-h3"></h3>
+    <p id="title-p"></p>
+    <ul>
+      <li id="item-1"></li>
+      <li id="item-2"></li>
+    </ul>
+    <p></p>
+    <div>
+        <span id="username-label"></span>&nbsp;&nbsp;&nbsp;<input type="text" id="username">
+    </div>
+    <div>
+            <span id="password-label"></span>&nbsp;&nbsp;&nbsp;<input type="text" id="password">
+    </div>
+    <div>
+        <button onclick="register();" id="register-button"></button>
+    </div>
+    <p>
+        <div>
+            <span id="register-code-label" style="visibility: hidden"></span>
+            <pre id="register-code" style="visibility: hidden"></pre>
+        </div>
+    </p>
+    <script>
+        var language = (navigator.language || navigator.browserLanguage).toLowerCase();
+        if (language.indexOf('zh') != -1) {
+            document.getElementById('title-h3').innerHTML='注册引擎部落'
+            document.getElementById('title-p').innerHTML='引擎部落的注册流程如下:'
+            document.getElementById('item-1').innerHTML='在此页面输入您的用户名和密码，之后点击「生成」，将其转换为「注册码」。<br>(运算将在本地完成，因此无需担心密码泄露)'
+            document.getElementById('item-2').innerHTML='在 QQ 群内输入 <strong>e!register 注册码</strong>，即可完成注册。'
+            document.getElementById('username-label').innerHTML='用户名'
+            document.getElementById('password-label').innerHTML='密码'
+            document.getElementById('register-button').innerHTML='生成注册码'
+            document.getElementById('register-code-label').innerHTML='您的注册码是:'
+        }
+        else if (language.indexOf('en') != -1) {
+            document.title = 'Register | Engine Tribe';
+            document.getElementById('title-p').innerHTML='The registration process of Engine Tribe is as follows:'
+            document.getElementById('item-1').innerHTML='Enter your username and password on this page, then click "Generate" to convert it into a "registration code".<br>(Operations will be done locally, so there is no need to worry about password leaks)'
+            document.getElementById('item-2').innerHTML='Enter the <strong>e!register YourRegistrationCode</strong> in the QQ group to complete the registration.'
+            document.getElementById('username-label').innerHTML='Username'
+            document.getElementById('password-label').innerHTML='Password'
+            document.getElementById('register-button').innerHTML='Generate Registration Code'
+            document.getElementById('register-code-label').innerHTML='Your registration code is:'
+        }
+        else {
+            document.title = 'Registro | Engine Tribe';
+            document.getElementById('title-p').innerHTML='El proceso de registro de Engine Tribe es el siguiente:'
+            document.getElementById('item-1').innerHTML='Ingrese su nombre de usuario y contraseña en esta página, luego haga clic en "Generar" para convertirlo en un "código de registro".<br>(Las operaciones se realizarán localmente, por lo que no hay necesidad de preocuparse por las filtraciones de contraseñas.)'
+            document.getElementById('item-2').innerHTML='Introduzca el <strong>e!register SuCódigoDeRegistro</strong> en el grupo QQ para completar el registro.'
+            document.getElementById('username-label').innerHTML='Nombre de usuario'
+            document.getElementById('password-label').innerHTML='Contraseña'
+            document.getElementById('register-button').innerHTML='Generar código de registro'
+            document.getElementById('register-code-label').innerHTML='Su código de registro es:'
+        }
+        function isValidUsername(str) {
+            return /^[A-Za-z0-9]*$/.test(str);
+        }
+        function register(){
+            objUsername=document.getElementById('username');
+            objPassword=document.getElementById('password');
+            if (! isValidUsername(objUsername.value)){
+                if (language.indexOf('zh') != -1) {
+                    alert('用户名应只包含英文字母和数字!');
+                }
+                else if (language.indexOf('en') != -1) {
+                    alert('Username should only contain English letters and numbers!');
+                }
+                else {
+                    alert('¡El nombre de usuario solo debe contener letras y números en inglés!');
+                }
+                return;
+            };
+            document.getElementById('register-code-label').style.visibility='visible';
+            document.getElementById('register-code').style.visibility='visible';
+            document.getElementById('register-code').innerHTML=btoa(objUsername.value+'\n'+SHA256(btoa(objPassword.value)))
+        }
+    </script>
+</body>
+
+</html>
