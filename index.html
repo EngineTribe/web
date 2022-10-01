@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="static/simple.min.css">
+    <script src="static/marked.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>body {background-color: #f5f7ff;}</style>
+    <script>
+        var language = (navigator.language || navigator.browserLanguage).toLowerCase();
+        if (language.indexOf('zh') != -1) {
+            document.title = '引擎部落';
+        }
+        else if (language.indexOf('en') != -1) {
+            document.title = 'Engine Tribe';
+        }
+        else {
+            document.title = 'Engine Tribe';
+        }
+    </script>
+</head>
+
+<body>
+    <div id="markdown"><p>Loading...</p></div>
+    <script>
+        var xhr = new XMLHttpRequest;
+        xhr.open('GET','https://raw.githubusercontent.com/EngineTribe/Server/main/README.md');
+        xhr.send();
+        xhr.onreadystatechange = function(){
+            document.getElementById("markdown").innerHTML=marked.parse(xhr.responseText);
+        };
+    </script>
+</body>
+
+</html>
