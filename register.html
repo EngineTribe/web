@@ -95,6 +95,17 @@
             document.getElementById('register-code-label').style.visibility='visible';
             document.getElementById('register-code').style.visibility='visible';
             document.getElementById('register-code').innerHTML=btoa(objUsername.value+'\n'+SHA256(btoa(objPassword.value)))
+            if (document.getElementById('register-code').innerHTML.indexOf('=')!=-1){
+                if (language.indexOf('zh') != -1) {
+                    alert('注册码结尾有等于号，复制时请不要漏下!');
+                }
+                else if (language.indexOf('en') != -1) {
+                    alert('There are equal signs at the end of the registration code, please do not miss them when copying!');
+                }
+                else {
+                    alert('Hay signos iguales al final del código de registro, ¡no los pierda al copiar!');
+                }
+            };
         }
     </script>
 </body>
