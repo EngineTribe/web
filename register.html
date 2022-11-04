@@ -34,6 +34,9 @@
             <span id="password-label"></span>&nbsp;&nbsp;&nbsp;<input type="password" id="password">
     </div>
     <div>
+            <span id="confirm-password-label"></span>&nbsp;&nbsp;&nbsp;<input type="password" id="confirm-password">
+    </div>
+    <div>
         <button onclick="register();" id="register-button"></button>
         <button onclick="copy();" id="copy-button" style="visibility: hidden" data-clipboard-action="copy" data-clipboard-target="#register-code"></button>
     </div>
@@ -52,6 +55,7 @@
             document.getElementById('item-2').innerHTML='在 QQ 群内输入 <strong>e!register 注册码</strong> (注意空格)，即可完成注册。'
             document.getElementById('username-label').innerHTML='用户名'
             document.getElementById('password-label').innerHTML='密码'
+            document.getElementById('confirm-password-label').innerHTML='确认密码'
             document.getElementById('register-button').innerHTML='生成注册码'
             document.getElementById('register-code-label').innerHTML='您的注册码是:'
             document.getElementById('copy-button').innerHTML='复制'
@@ -63,6 +67,7 @@
             document.getElementById('item-2').innerHTML='Enter the <strong>e!register YourRegistrationCode</strong> in the QQ group or #command channel of Discord server to complete the registration.'
             document.getElementById('username-label').innerHTML='Username'
             document.getElementById('password-label').innerHTML='Password'
+            document.getElementById('confirm-password-label').innerHTML='Confirm password'
             document.getElementById('register-button').innerHTML='Generate Registration Code'
             document.getElementById('register-code-label').innerHTML='Your registration code is:'
             document.getElementById('copy-button').innerHTML='Copy'
@@ -74,6 +79,7 @@
             document.getElementById('item-2').innerHTML='Ingrese el <strong>e!register SuCódigoDeRegistro</strong> en el grupo QQ o en el canal #command del servidor Discord para completar el registro.'
             document.getElementById('username-label').innerHTML='Nombre de usuario'
             document.getElementById('password-label').innerHTML='Contraseña'
+            document.getElementById('confirm-password-label').innerHTML='Confirmar contraseña'
             document.getElementById('register-button').innerHTML='Generar código de registro'
             document.getElementById('register-code-label').innerHTML='Su código de registro es:'
             document.getElementById('copy-button').innerHTML='Copiar'
@@ -87,6 +93,19 @@
         function register(){
             objUsername=document.getElementById('username');
             objPassword=document.getElementById('password');
+            objConfirmPassword=document.getElementById('confirm-password');
+            if (objConfirmPassword.value !== objPassword.value){
+                if (language.indexOf('zh') != -1) {
+                    alert('密码和确认密码不一致!');
+                }
+                else if (language.indexOf('en') != -1) {
+                    alert('Password and Confirm Password do not match!');
+                }
+                else {
+                    alert('Contraseña y Confirmar contraseña no coinciden!');
+                }
+                return;
+            }
             if (! isValidUsername(objUsername.value)){
                 if (language.indexOf('zh') != -1) {
                     alert('用户名应只包含英文字母和数字!');
