@@ -3,8 +3,6 @@
 <head>
     <link rel="stylesheet" href="static/enginetribe.min.css">
     <script src="static/sha256.js"></script>
-    <script src="static/message.js"></script>
-    <link rel="stylesheet" href="static/messsage.css">
     <script crossorigin="anonymous" src="https://lib.baomitu.com/clipboard.js/1.7.1/clipboard.min.js"></script>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script>
@@ -91,25 +89,37 @@
             objPassword=document.getElementById('password');
             if (! isValidUsername(objUsername.value)){
                 if (language.indexOf('zh') != -1) {
-                    message.run('用户名应只包含英文字母和数字!');
+                    alert('用户名应只包含英文字母和数字!');
                 }
                 else if (language.indexOf('en') != -1) {
-                    message.run('Username should only contain English letters and numbers!');
+                    alert('Username should only contain English letters and numbers!');
                 }
                 else {
-                    message.run('¡El nombre de usuario solo debe contener letras y números en inglés!');
+                    alert('¡El nombre de usuario solo debe contener letras y números en inglés!');
                 }
                 return;
             };
             if (isValidPassword(objPassword.value)){
                 if (language.indexOf('zh') != -1) {
-                    message.run('密码不应包含特殊字符！');
+                    alert('密码不应包含特殊字符！');
                 }
                 else if (language.indexOf('en') != -1) {
-                    message.run('Passwords should not contain special characters!');
+                    alert('Passwords should not contain special characters!');
                 }
                 else {
-                    message.run('¡Las contraseñas no deben contener caracteres especiales!');
+                    alert('¡Las contraseñas no deben contener caracteres especiales!');
+                }
+                return;
+            };
+            if (objPassword.value.length > 12){
+                if (language.indexOf('zh') != -1) {
+                    alert('你的密码太长了！');
+                }
+                else if (language.indexOf('en') != -1) {
+                    alert('Your password is too long!');
+                }
+                else {
+                    alert('¡tu contraseña es muy larga!');
                 }
                 return;
             };
@@ -122,13 +132,13 @@
             let clipboard = new Clipboard("#copy-button");
             clipboard.on("success", function(e) {
                 if (language.indexOf('zh') != -1) {
-                    message.run('已经复制到剪贴板!');
+                    alert('已经复制到剪贴板!');
                 }
                 else if (language.indexOf('en') != -1) {
-                    message.run('Copied to clipboard!');
+                    alert('Copied to clipboard!');
                 }
                 else {
-                    message.run('¡Copiado al portapapeles!');
+                    alert('¡Copiado al portapapeles!');
                 }
             });
         }
