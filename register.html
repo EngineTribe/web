@@ -120,13 +120,13 @@
             };
             if (isValidPassword(objPassword.value)){
                 if (language.indexOf('zh') != -1) {
-                    alert('密码不应包含特殊字符！');
+                    alert('密码应只包含英文字母和数字！');
                 }
                 else if (language.indexOf('en') != -1) {
-                    alert('Passwords should not contain special characters!');
+                    alert('The password should only contain English letters and numbers!');
                 }
                 else {
-                    alert('¡Las contraseñas no deben contener caracteres especiales!');
+                    alert('¡La contraseña solo debe contener letras y números en inglés!');
                 }
                 return;
             };
