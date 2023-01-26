@@ -142,6 +142,18 @@
                 }
                 return;
             };
+            if (objUsername.value.length > 25){
+                if (language.indexOf('zh') != -1) {
+                    alert('你的用户名太长了！');
+                }
+                else if (language.indexOf('en') != -1) {
+                    alert('Your username is too long!');
+                }
+                else {
+                    alert('¡tu nombre de usuario es muy larga!');
+                }
+                return;
+            };
             document.getElementById('register-code-label').style.visibility='visible';
             document.getElementById('register-code').style.visibility='visible';
             document.getElementById('copy-button').style.visibility='visible';
