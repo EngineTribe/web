@@ -1,6 +1,6 @@
 # 🎮 Engine Bot for Discord
 
-Engine Bot for Discord is powered by Nextcord with slash commands and localization.
+Engine Bot for Discord is powered by [Nextcord](https://docs.nextcord.dev/) with slash commands and localization.
 
 The bot is available at https://github.com/EngineTribe/EngineBotDiscord .
 
@@ -13,8 +13,6 @@ It's recommended to enable 'Administration' permission for the bot if you doesn'
 
 You need to create a config file named `config.yml` in the root directory of Engine Bot for Discord.  
 You can copy the `config.default.yml` file and rename it to `config.yml` .
-
-You can also set the `CONFIG_PATH` environment variable to specify an external config file.
 
 ## 🤖 Discord Bot Config
 
@@ -41,12 +39,13 @@ The rich presence configuration is in the `rich_presence` section.
 
 ## 🌐 Engine Tribe API
 
-Engine Bot for Discord needs to connect to the Engine Tribe API for registering and doing queries.   
+Engine Bot needs to connect to the Engine Tribe API for registering and doing queries.   
 The API configuration is in the `enginetribe_api` section of the config file.
 
 - `host`: The url of the Engine Tribe API. It is recommended to set it to `http://localhost:xxxxx` if the Engine Tribe API and bots are on the same server.
 - `api_key`: The API key of the Engine Tribe API, needs to be the same as `enginetribe`>`api_key` in the Engine Tribe configuration.
-- `tokens`: The [client tokens](/tokens.md) to query the stage API.
+- `tokens`: The [client tokens](/tokens.md) to query the stage API.  
+  The client type should be `ENGINEBOT` (`4`).
 
 ## 📤 Webhook
 
