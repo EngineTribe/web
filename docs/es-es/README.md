@@ -3,7 +3,7 @@
   <br>
 </div>
 
-📡 **Engine Tribe** proyecto es una reimplementación de código abierto para el servidor en línea de SMM:WE v3.2.x, también utilizado en SMM:WE v3.3.x por la comunidad de Engine Kingdom.
+📡 El proyecto **Engine Tribe**, anteriormente conocido como SMMWE Cloud, tiene como objetivo crear un servidor en línea SMM:WE de código abierto, flexible, internacional y extensible.
 
 ---
 
