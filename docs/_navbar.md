@@ -1,4 +1,4 @@
 * Languages
-    * [🇨🇳 中文](/zh-cn/)
+    * [🇨🇳 中文 (WIP)](/zh-cn/)
     * [🇺🇸 English](/)
-    * [🇪🇸 Español](/es-es/)
+    * [🇪🇸 Español (WIP)](/es-es/)
