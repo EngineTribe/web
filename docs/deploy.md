@@ -15,9 +15,11 @@ The API configuration is in the `enginetribe` section of the config file.
 
 - `host`: The host Engine Tribe listens on.  
 - `port`: The port Engine Tribe listens on, default is `30000` .
+- `workers`: The number of threads Engine Tribe uses, default is `1`, recommended to set it to the number of CPU cores to get the best performance.
 - `api_root`: The url prefix of generated level download links, with trailing slash.  
   If you are using a reverse proxy, you can set this to the url of the reverse proxy.
-- `api_key`: The API key which is used by users and clients API.
+- `api_key`: The API key which is required by users and clients API, used by bots to connect to the API.  
+  You can generate a random string as the API key.
 - `verify_user_agent`: Whether to verify the user agent of the client.  
   If set to `true` , the client must be a valid SMM:WE game, otherwise the request will be rejected.  
   You can [click here](https://github.com/EngineTribe/EngineTribe/blob/main/depends.py#L10) to view the list of valid user agents.
@@ -43,6 +45,11 @@ The SQL database configuration is in the `database` section of the config file.
 - `debug`: Whether to print executed SQL statements, only used for debugging.
 
 ### ⏰ Session
+
+> The auth_code is a unique session code that is used to determine the authenticity of the session  
+> Keep in mind that the auth_code is a system that I have implemented in the SMMWE Online as a method of saving sessions  
+> There can only be one active auth_code per account, which means that you cannot play on two devices at the same time with the same SMMWE account    
+> -- DangerousZone
 
 Engine Tribe also needs a Redis database to store login sessions, the Redis database configuration is in the `redis` section of the config file.
 
