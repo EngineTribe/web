@@ -1,6 +1,6 @@
 * [🏰 Engine Tribe](/es-es/ "Engine Tribe")
 * [🗄️ Implementar la Engine Tribe](/es-es/deploy.md "Implementar la Engine Tribe")
-* [🤖 Engine Bots](/es-es/bots/README.md "Engine Bots")
+* [🤖 Engine Bots](/es-es/bots/ "Engine Bots")
   * [🎮 Discord](/es-es/bots/discord.md "Engine Bot para Discord")
   * [🐧 QQ](/es-es/bots/qq.md "Engine Bot para QQ")
   * [🛩️ Telegram](/es-es/bots/telegram.md "Engine Bot para Telegram")
