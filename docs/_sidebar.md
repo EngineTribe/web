@@ -6,3 +6,5 @@
   * [🛩️ Telegram](/bots/telegram.md "Engine Bot for Telegram")
 * [💻 Client Tokens](/tokens.md "Client Tokens")
 * [📝 API Reference](/api.md "API Reference")
+* [❌ Error Types](/errors.md "Error Types")
+* [💬 About](/about.md "About Engine Tribe")
