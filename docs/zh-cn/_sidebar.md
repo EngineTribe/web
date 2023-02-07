@@ -1,6 +1,6 @@
 * [🏰 引擎部落](/zh-cn/ "引擎部落")
 * [🗄️ 部署引擎部落](/zh-cn/deploy.md "部署引擎部落")
-* [🤖 引擎机器人](/zh-cn/bots/README.md "引擎机器人")
+* [🤖 引擎机器人](/zh-cn/bots/ "引擎机器人")
   * [🎮 Discord](/zh-cn/bots/discord.md "引擎机器人 for Discord")
   * [🐧 QQ](/zh-cn/bots/qq.md "引擎机器人 for QQ")
   * [🛩️ Telegram](/zh-cn/bots/telegram.md "引擎机器人 for Telegram")
