@@ -23,7 +23,7 @@ The API configuration is in the `enginetribe` section of the config file.
 - `verify_user_agent`: Whether to verify the user agent of the client.  
   If set to `true` , the client must be a valid SMM:WE game, otherwise the request will be rejected.  
   You can [click here](https://github.com/EngineTribe/EngineTribe/blob/main/depends.py#L10) to view the list of valid user agents.
-- `cors_allowed_domains`: The `Access-Control-Allow-Origin` header of the API, can be `*` or a domain name.
+- `cors_allowed_origins`: List of allowed `Access-Control-Allow-Origin` header of the API, can be `*` or a domain name.
 - `rows_perpage`: The number of levels per page in the Course World.
 - `upload_limit`: The maximum number of levels that can be uploaded of a user.
 - `booster_extra_limit`: The extra number of levels that can be uploaded of a user with booster.
