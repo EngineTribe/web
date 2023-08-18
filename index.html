@@ -5,15 +5,15 @@
     <script src="static/marked.min.js"></script>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <script>
-        var language = (navigator.language || navigator.browserLanguage).toLowerCase();
+        var language = (navigator.language || navigator.browserLanguage).toLowerCase()
         if (language.indexOf('zh') != -1) {
-            document.title = '引擎部落';
+            document.title = '引擎部落'
         }
         else if (language.indexOf('en') != -1) {
-            document.title = 'Engine Tribe';
+            document.title = 'Engine Tribe'
         }
         else {
-            document.title = 'Engine Tribe';
+            document.title = 'Engine Tribe'
         }
     </script>
 </head>
@@ -21,12 +21,20 @@
 <body>
     <div id="markdown"><p>Loading...</p></div>
     <script>
-        var xhr = new XMLHttpRequest;
-        xhr.open('GET','https://raw.githubusercontent.com/EngineTribe/Server/main/README.md');
-        xhr.send();
-        xhr.onreadystatechange = function(){
-            document.getElementById("markdown").innerHTML=marked.parse(xhr.responseText);
-        };
+        var xhr = new XMLHttpRequest
+        xhr.open('GET','https://raw.githubusercontent.com/EngineTribe/EngineTribe/main/README.md')
+        xhr.send()
+        let mdText = xhr.responseText
+        mdText = mdText.replace(
+            "https://img.shields.io/badge/QQ%20Group-723483890-faad01?logo=tencentqq",
+            "/static/qq_badge.svg"
+        ).replace(
+            "https://img.shields.io/badge/Telegram-Channel-28a8ea?logo=telegram",
+            "/static/telegram_badge.svg"
+        )
+        xhr.onreadystatechange = () => {
+            document.getElementById("markdown").innerHTML=marked.parse(xhr.responseText)
+        }
     </script>
 </body>
 
