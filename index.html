@@ -24,16 +24,16 @@
         var xhr = new XMLHttpRequest
         xhr.open('GET','https://raw.githubusercontent.com/EngineTribe/EngineTribe/main/README.md')
         xhr.send()
-        let mdText = xhr.responseText
-        mdText = mdText.replace(
-            "https://img.shields.io/badge/QQ%20Group-723483890-faad01?logo=tencentqq",
-            "/static/qq_badge.svg"
-        ).replace(
-            "https://img.shields.io/badge/Telegram-Channel-28a8ea?logo=telegram",
-            "/static/telegram_badge.svg"
-        )
         xhr.onreadystatechange = () => {
-            document.getElementById("markdown").innerHTML=marked.parse(xhr.responseText)
+            let mdText = xhr.responseText
+            mdText = mdText.replace(
+                "https://img.shields.io/badge/QQ%20Group-723483890-faad01?logo=tencentqq",
+                "/static/qq_badge.svg"
+            ).replace(
+                "https://img.shields.io/badge/Telegram-Channel-28a8ea?logo=telegram",
+                "/static/telegram_badge.svg"
+            )
+            document.getElementById("markdown").innerHTML=marked.parse(mdText)
         }
     </script>
 </body>
