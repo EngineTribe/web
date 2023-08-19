@@ -5,6 +5,7 @@
   * [🐧 QQ](/bots/qq.md "Engine Bot for QQ")
   * [🛩️ Telegram](/bots/telegram.md "Engine Bot for Telegram")
 * [💻 Client Tokens](/tokens.md "Client Tokens")
+* [🚀 Improving Performance](/performance.md "Improving Performance")
 * [📝 API Reference](/api.md "API Reference")
 * [❌ Error Types](/errors.md "Error Types")
 * [💬 About](/about.md "About Engine Tribe")

@@ -5,6 +5,7 @@
   * [🐧 QQ](/zh-cn/bots/qq.md "引擎机器人 for QQ")
   * [🛩️ Telegram](/zh-cn/bots/telegram.md "引擎机器人 for Telegram")
 * [💻 客户端令牌](/zh-cn/tokens.md "客户端令牌")
+* [🚀 改进性能](/performance.md "改进性能")
 * [📝 API 参考](/zh-cn/api.md "API 参考")
 * [❌ 错误类型](/zh-cn/errors.md "错误类型")
 * [💬 关于引擎部落](/zh-cn/about.md "关于引擎部落")

@@ -5,7 +5,7 @@ Unlike the original Engine-bot, Engine Tribe supports multiple clients.
 You can insert follow SQL statements to the database to add default clients:
 
 ```sql
-insert into enginetribe.client_table (id, token, valid, type, locale, mobile, proxied)
+insert into client_table (id, token, valid, type, locale, mobile, proxied)
 values  (1, 'SMMWEPCCN', 1, 1, 'CN', 0, 1),
         (2, 'SMMWEPCES', 1, 1, 'ES', 0, 0),
         (3, 'SMMWEPCEN', 1, 1, 'EN', 0, 0),
