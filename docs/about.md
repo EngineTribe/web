@@ -4,4 +4,4 @@ The Engine Tribe project, formerly known as SMMWE Cloud, aims to create an open 
 
 ## 📜 History
 
-Read [this blog post](https://blog.yidaozhan.top/2023/02/02/engine-tribe-history/) to learn about the history of Engine Tribe.
+Read [this blog post](https://blog.chyk.ink/2023/02/02/engine-tribe-history/) to learn about the history of Engine Tribe.

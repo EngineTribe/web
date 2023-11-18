@@ -27,15 +27,15 @@ window.$docsify = {
             hook.afterEach((html) => {
                 const currentDocPath = vm.route.file;
                 const localizedPageBottoms = {
-                    'zh-cn': '<div align="center">2021-2023 由 <a href="https://yidaozhan.top">是一刀斩哒</a> 和引擎部落团队用 💗 创作</div>',
-                    'es-es': '<div align="center">2021-2023 Por <a href="https://yidaozhan.top">Yidaozhan Ya</a> y el equipo de Engine Tribe con 💗</div>'
+                    'zh-cn': '<div align="center">2021-2023 由 <a href="https://chyk.ink">斬風 千雪</a> 和引擎部落团队用 💗 创作</div>',
+                    'es-es': '<div align="center">2021-2023 Por <a href="https://chyk.ink">Kirukaze Chiyuki</a> y el equipo de Engine Tribe con 💗</div>'
                 }
                 for (const lang in localizedPageBottoms) {
                     if (currentDocPath.includes(lang)) {
                         return html + localizedPageBottoms[lang];
                     }
                 }
-                return html + '<div align="center">2021-2023 By <a href="https://yidaozhan.top">Yidaozhan Ya</a> and Engine Tribe team with 💗</div>';
+                return html + '<div align="center">2021-2023 By <a href="https://chyk.ink">Kirukaze Chiyuki</a> and Engine Tribe team with 💗</div>';
             });
         }
     ],
