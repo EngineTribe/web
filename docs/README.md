@@ -7,6 +7,10 @@
 
 ---
 
+### ⚠️ Maintenance Mode
+
+Currently, the project is in maintenance mode and will not receive any functional updates in the future.
+
 ### ✅ Features
 
 - 👥 All APIs in original Engine-bot
@@ -18,4 +22,4 @@
 
 ### 🫂 Join Our Community
 
-![QQChat:723483890](https://img.shields.io/badge/QQ%20Group-723483890-faad01?logo=tencentqq) [![Discord:Engine Kingdom](https://img.shields.io/badge/Discord-Engine%20Kingdom-5865f2?logo=discord)](https://discord.gg/enginekingdom) [![Telegram Channel](https://img.shields.io/badge/Telegram-Channel-28a8ea?logo=telegram)](https://t.me/EngineTribe_Channel)
+![QQChat:723483890](https://img.shields.io/badge/QQ%20Group-723483890-faad01?logo=tencentqq) [![Telegram Channel](https://img.shields.io/badge/Telegram-Channel-28a8ea?logo=telegram)](https://t.me/EngineTribe_Channel)
