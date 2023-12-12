@@ -28,7 +28,7 @@ window.$docsify = {
                 const currentDocPath = vm.route.file;
                 const localizedPageBottoms = {
                     'zh-cn': '<div align="center">2021-2023 由 <a href="https://chyk.ink">斬風 千雪</a> 和引擎部落团队用 💗 创作</div>',
-                    'es-es': '<div align="center">2021-2023 Por <a href="https://chyk.ink">Kirukaze Chiyuki</a> y el equipo de Engine Tribe con 💗</div>'
+                    'es-es': '<div align="center">2021-2023 Por <a href="https://chyk.ink">Kirikaze Chiyuki</a> y el equipo de Engine Tribe con 💗</div>'
                 }
                 for (const lang in localizedPageBottoms) {
                     if (currentDocPath.includes(lang)) {
